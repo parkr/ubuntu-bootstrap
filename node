@@ -10,11 +10,11 @@
 
 # Update System
 echo "System Update"
-apt-get -y update
+sudo apt-get -y update
 echo "Update completed"
 
 # Install help app
-apt-get -y install libssl-dev git-core pkg-config build-essential curl gcc g++ checkinstall
+sudo apt-get -y install libssl-dev git-core pkg-config build-essential curl gcc g++ checkinstall
 
 # Download & Unpack Node.js - v. 0.8.16
 echo "Download Node.js - v. 0.8.16"
