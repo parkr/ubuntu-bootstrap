@@ -1,0 +1,22 @@
+#!/bin/sh
+##############################################################
+#
+# Rock-Solid Node.js Platform on Ubuntu
+# (Redis piece extracted)
+# Auto-config by apptob.org
+# Author: Ruslan Khissamov, email: rrkhissamov@gmail.com
+# GitHub: https://github.com/rushis
+#
+############################################################## 
+
+# Install Redis
+echo 'Install Redis'
+cd /tmp
+wget http://download.redis.io/redis-stable.tar.gz
+tar xvzf redis-stable.tar.gz
+cd redis-stable
+make
+cd src
+sudo cp redis-server /usr/local/bin/
+sudo cp redis-cli /usr/local/bin/
+echo 'Redis install completed. '
