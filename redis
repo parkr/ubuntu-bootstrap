@@ -9,6 +9,10 @@
 #
 ############################################################## 
 
+# System dependencies
+sudo apt-get -y update
+sudo apt-get -y install libssl-dev git-core pkg-config build-essential curl gcc g++ checkinstall
+
 # Install Redis
 echo 'Install Redis'
 cd /tmp
