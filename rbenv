@@ -19,7 +19,6 @@ sudo apt-get -y install git-core curl tklib
 #
 curl https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
 rbenv bootstrap-ubuntu-12-04
-rbenv bootstrap
 
 #
 # Install versions
@@ -31,6 +30,7 @@ for ruby_version in "${RBVERS[@]}"; do
   ~/.rbenv/plugins/ruby-build/bin/ruby-build $RBVER ~/.rbenv/versions/${ruby_version} --with-openssl-dir=/usr/local
   # Install shims for all Ruby binaries
   ~/.rbenv/bin/rbenv rehash
+  ~/.rbenv/bin/rbenv bootstrap
 done
 
 ~/.rbenv/bin/rbenv global ${RBVERS[0]}
